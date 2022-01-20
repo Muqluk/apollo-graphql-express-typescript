@@ -1,0 +1,39 @@
+# OS
+.DS_Store
+.awcache
+
+# compiled output
+dist
+node_modules
+tmp
+src/@types
+
+# IDEs and editors
+.idea/
+owl-forms-service.iml
+postgres/
+.vscode/
+
+# dotenv environment variables file
+# See: https://www.npmjs.com/package/dotenv#faq
+.env.*
+.env
+*.env
+
+# Tests
+/coverage
+junit.xml
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*3
+
+#Terraform
+*.swp
+.terraform
+override.tf
+*_override.tf
+
+# Deployment
+/semver-tool

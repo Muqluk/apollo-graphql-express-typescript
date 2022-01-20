@@ -1,0 +1,22 @@
+PORT=2593
+
+GRAPH_SERVICE_URL=http://localhost:4000/graphql
+DEBUG=true
+ENVIRONMENT=dev
+
+# YGL_Live Db - mssql
+KNEX_YGL_LIVE_HOST={{ string: Host/Url }}
+KNEX_YGL_LIVE_PORT={{ number: Port }}
+KNEX_YGL_LIVE_USER={{ string: Username }}
+KNEX_YGL_LIVE_PASSWORD={{ string: Password }}
+KNEX_YGL_LIVE_DATABASE={{ string: Database Name }}
+KNEX_YGL_LIVE_CLIENT=mssql # Do not change this.
+
+# FamilyFileDb - postgresql
+KNEX_FAMILY_FILE_HOST={{ string: Host/Url }}
+KNEX_FAMILY_FILE_PORT={{ number: Port }}
+KNEX_FAMILY_FILE_USER={{ string: Username }}
+KNEX_FAMILY_FILE_PASSWORD={{ string: Password }}
+KNEX_FAMILY_FILE_DATABASE={{ string: Database Name }}
+KNEX_FAMILY_FILE_CLIENT=pg # Do not change this
+

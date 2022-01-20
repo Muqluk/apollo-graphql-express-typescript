@@ -1,0 +1,38 @@
+type FamilyFileUser {
+  createdAt: Date
+  createdBy: Int
+  email: String
+  externalId: Int
+  firstName: String
+  isActive: Boolean
+  lastName: String
+  updateAt: Date
+  updatedBy: Int
+  userId: Int!
+  username: String
+  userRoleId: Int
+  workPhone: String
+  largeImageId: Int
+  smallImageId: Int
+  thumbnailImageId: Int
+  phoneProviderUsername: String
+  positionId: Int
+}
+
+type FamilyFileUserRelations {
+  userId: Int!
+  managerId: Int!
+}
+
+type FamilyFileUserAssignment {
+  userAssignmentId: Int!
+  userId: Int
+  familyFileCount: Int
+  lastAssigned: Date
+  segment: String
+}
+
+extend type Query {
+  AllFamilyFileUsers: [FamilyFileUser] @cacheControl(maxAge: 90)
+  FamilyFileUserById(userId: Int!): FamilyFileUser @cacheControl(maxAge: 90)
+}

@@ -1,0 +1,25 @@
+schema:
+    - 'src/typeDefs/*.graphql'
+
+generates:
+    ./src/schema.json:
+      plugins:
+        - introspection
+
+
+    ./src/@types/types.d.ts:
+      plugins:
+        - typescript
+        - typescript-resolvers
+
+config:
+    contextType: ./context#Context
+    defaultMapper: Partial<{T}>
+    useIndexSignature: true
+    avoidOptionals: true
+    noSchemaStitching: true
+    constEnums: true
+    namingConvention:
+      enumValues: keep
+watch: false
+overwrite: true

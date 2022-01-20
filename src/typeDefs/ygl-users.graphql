@@ -1,0 +1,19 @@
+type YglUser {
+  username: String
+  userId: Int!
+  userRoleId: Int
+  status: Int
+  role: String
+  mgr: String
+  email: String
+  hiredate: Date
+  termdate: Date
+  userCreatedOn: Date
+  startDate: Date
+  transferDate: Date
+}
+
+extend type Query {
+  AllYglUsers: [YglUser] @cacheControl(maxAge: 90)
+  YglUsersNotInFamilyFileDb: [YglUser] @cacheControl(maxAge: 90)
+}

@@ -1,0 +1,7 @@
+.awcache
+dist
+node_modules
+package-lock.json
+schema.json
+src/@types
+analytics
